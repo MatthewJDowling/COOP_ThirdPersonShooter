@@ -1,0 +1,68 @@
+# Generated UE4 junk
+
+Binaries/*
+
+Build/*
+
+Content/**/*_BuiltData.uasset
+Plugins/*Intermediate/*
+
+DerivedDataCache/
+
+Intermediate/
+
+Saved/
+
+
+
+# Preserve build configuration settings
+
+!Build/*/
+
+Build/*/**
+!Build/**/*.ico
+
+
+
+# Generated Visual Studio junk
+
+.vs/
+
+*.sln
+
+*.VC.db
+
+*.opensdf
+
+*.opendb
+
+*.sdf
+
+*.suo
+
+
+# Generated Visual Studio Code junk
+
+.vscode/
+
+
+
+# Generated XCode junk
+
+*.xcodeproj
+
+*.xcworkspace
+
+
+
+<<<<<<< HEAD
+
+#User Generated Build Folder for testing
+
+Builds/*
+
+=======
+
+Builds/
+
+>>>>>>> matt
