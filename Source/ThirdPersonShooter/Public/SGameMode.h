@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "ThirdPersonShooterGameModeBase.generated.h"
+#include "SGameMode.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class THIRDPERSONSHOOTER_API AThirdPersonShooterGameModeBase : public AGameModeBase
+class THIRDPERSONSHOOTER_API ASGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
-	
-	
-	
+
+
+
 	
 };
