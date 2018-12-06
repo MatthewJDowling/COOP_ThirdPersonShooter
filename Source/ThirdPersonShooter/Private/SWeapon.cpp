@@ -122,6 +122,7 @@ void ASWeapon::Fire()
 
 			}
 
+			PlayFireEffects(TracerEndPoint);
 
 			if (Role == ROLE_Authority)
 			{
