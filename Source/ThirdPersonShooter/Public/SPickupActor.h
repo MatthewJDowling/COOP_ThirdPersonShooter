@@ -8,6 +8,7 @@
 
 class USphereComponent;
 class UDecalComponent;
+class ASPowerUpActor;
 
 UCLASS()
 class THIRDPERSONSHOOTER_API ASPickupActor : public AActor
@@ -30,6 +31,19 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UDecalComponent* DecalComp;
 
+	UPROPERTY(EditInstanceOnly, Category = "PickupActor")
+	TSubclassOf<ASPowerUpActor> PowerUpClass;
+
+
+	void Respawn();
+
+
+	ASPowerUpActor* PowerUpInstance;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "PickupActor")
+	float CooldownDuration;
+
+	FTimerHandle TimerHandle_RespawnTimer;
 
 public:	
 
