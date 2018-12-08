@@ -4,7 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "SGameState.h"
 #include "SGameMode.generated.h"
+
+enum class EWaveState : uint8;
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnActorKilled,AActor*, VictimActor, AActor*, KillerActor, AController*, KillerController);
 
 /**
  * 
@@ -18,6 +23,8 @@ class THIRDPERSONSHOOTER_API ASGameMode : public AGameModeBase
 protected:
 
 	FTimerHandle TimerHandle_BotSpawner;
+
+	FTimerHandle TimerHandle_NextWaveStart;
 
 	int32 NrOfBotsToSpawn;
 
@@ -40,10 +47,27 @@ protected:
 
 	void PrepareForNextWave();
 
+	void CheckWaveState();
+
+	void GameOver();
+
+	void CheckAnyPlayerAlive();
+
+	void SetWaveState(EWaveState NewState);
+
+	void RestartDeadPlayers();
+
+
+
 public:
 
 	ASGameMode();
 
 	virtual void StartPlay() override;
-	
+
+	virtual void Tick(float DeltaSeconds) override; 
+
+
+	UPROPERTY(BlueprintAssignable, Category = "GameMode")
+	FOnActorKilled OnActorKilled;
 };
