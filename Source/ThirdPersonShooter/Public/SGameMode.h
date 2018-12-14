@@ -33,6 +33,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "GameMode")
 	float TimeBetweenWaves;
 
+	UPROPERTY(EditDefaultsOnly, Category = "GameMode")
+		int32 BotsPerWave;
+
 
 
 	//Hook for BP to spawn a single bot
