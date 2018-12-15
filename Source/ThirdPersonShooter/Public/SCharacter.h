@@ -43,6 +43,7 @@ protected:
 	void EndZoom();
 
 
+
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly,Category = "Components")
 	UCameraComponent* CameraComp;
 

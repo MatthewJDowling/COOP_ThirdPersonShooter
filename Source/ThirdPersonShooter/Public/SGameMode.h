@@ -28,6 +28,7 @@ protected:
 
 	int32 NrOfBotsToSpawn;
 
+	UPROPERTY(BlueprintReadWrite, Category = "GameMode")
 	int32 WaveCount;
 
 	UPROPERTY(EditDefaultsOnly, Category = "GameMode")
